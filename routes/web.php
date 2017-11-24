@@ -42,3 +42,11 @@ Route::get('/debug', function () {
 
     dump($debug);
 });
+
+
+Auth::routes();
+
+Route::resource('listings', 'ListingController');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
